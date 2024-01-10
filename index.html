@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=IBM+Plex+Serif:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #ded0b6;
+      }
+      .pricing-container {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .pricing-plan {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+        margin-right: 40px;
+        margin-left: 40px;
+      }
+      .plan-title {
+        font-weight: 100px;
+        font-size: 40px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .plan-price {
+        font-family: "IBM Plex Serif", serif;
+        font-size: larger;
+      }
+
+      .plan-features {
+        list-style-type: none;
+        margin-bottom: 70px;
+        padding: 0;
+        font-size: 25px;
+        text-align: left;
+      }
+      .plan-features li {
+        margin-bottom: 20px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+      }
+      .plan-button {
+        color: #687eff;
+        background-color: #96efff;
+        box-shadow: #176b87 5px 5px;
+        border-radius: 15%;
+        height: 40px;
+        border: 0;
+        font-weight: bold;
+      }
+      .plan-button:hover {
+        background-color: #04364a;
+      }
+      #pricing-plan-a {
+        background-color: #bbab8c;
+        border: solid #b19470 10px;
+        border-radius: 5%;
+        transition: 0.5s;
+        animation: hover 1s infinite ease-in alternate;
+        animation-play-state: paused;
+      }
+      @keyframes hover {
+        0% {
+          border: solid 10px #b19470;
+        }
+        25% {
+          border: solid 10px #c6a969;
+        }
+      }
+      #pricing-plan-a:hover {
+        box-shadow: 10px 10px #994d1c;
+        margin-top: -5px;
+        animation-play-state: running;
+      }
+      #pricing-plan-b {
+        background-color: #a9a9a9;
+        border: solid #b6bbc4 10px;
+        border-radius: 5%;
+        transition: 0.5s;
+        animation: hoverb 1s infinite ease-in alternate;
+        animation-play-state: paused;
+      }
+      @keyframes hoverb {
+        0% {
+          border: solid 10px white;
+        }
+        50% {
+          border: solid 10px #f3eeea;
+        }
+      }
+      #pricing-plan-b:hover {
+        margin-top: -5px;
+        box-shadow: 10px 10px #7d7c7c;
+        animation-play-state: running;
+      }
+      #pricing-plan-c {
+        background-color: #f5cca0;
+        border: solid #e48f45 10px;
+        border-radius: 5%;
+        transition: 0.5s;
+        animation: hoverc 1s infinite ease-in alternate;
+        animation-play-state: paused;
+      }
+      @keyframes hoverc {
+        0% {
+          border: solid 10px #ffb000;
+        }
+        50% {
+          border: solid 10px #ffbb5c;
+        }
+      }
+      #pricing-plan-c:hover {
+        margin-top: -5px;
+        box-shadow: 10px 10px #e36414;
+        animation-play-state: running;
+      }
+      .bronze {
+        color: #b19470;
+        animation: bronze 1s infinite ease-in alternate;
+        animation-play-state: paused;
+      }
+      @keyframes bronze {
+        0% {
+          color: #b19470;
+        }
+        25% {
+          color: #c6a969;
+        }
+      }
+      #pricing-plan-a:hover .bronze {
+        animation-play-state: running;
+      }
+
+      .silver {
+        color: #bfcfe7;
+        animation: sliver 1s infinite ease-in alternate;
+        animation-play-state: paused;
+      }
+      @keyframes sliver {
+        0% {
+          color: white;
+        }
+        50% {
+          color: #f3eeea;
+        }
+      }
+      #pricing-plan-b:hover .silver {
+        animation-play-state: running;
+      }
+      .gold {
+        color: #ff9b50;
+        animation: glod 1s infinite ease-in alternate;
+        animation-play-state: paused;
+      }
+      @keyframes glod {
+        0% {
+          color: #ffb000;
+        }
+        50% {
+          color: #ffbb5c;
+        }
+      }
+      #pricing-plan-c:hover .gold {
+        animation-play-state: running;
+      }
+      .Basic {
+        border-bottom: solid;
+        color: #ded0b6;
+      }
+      .Standard {
+        border-bottom: solid;
+        color: #45474b;
+      }
+      .Premium {
+        border-bottom: solid;
+        color: #c07f00;
+      }
+      li {
+        color: #43766c;
+      }
+      #red {
+        color: #6b240c;
+      }
+
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .pricing-container {
+          flex-direction: column;
+          height: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan" id="pricing-plan-a">
+        <div class="container">
+          <div class="plan-title"><span class="bronze">Basic</span></div>
+          <div class="plan-price">$9.99/month</div>
+        </div>
+        <ul class="plan-features plan-a">
+          <li>&#10003; <span class="Basic"> 10GB Storage</span></li>
+          <li>&#10003; <span class="Basic"> 1 User</span></li>
+          <li id="red">&#x2613; <span class="Basic"> Support</span></li>
+        </ul>
+      </div>
+      <div class="pricing-plan" id="pricing-plan-b">
+        <div class="container">
+          <div class="plan-title"><spam class="silver">Standard</spam></div>
+          <div class="plan-price">$19.99/month</div>
+        </div>
+        <ul class="plan-features plan-b">
+          <li>&#10003; <span class="Standard">50GB Storage</span></li>
+          <li>&#10003; <span class="Standard">5 Users</span></li>
+          <li>
+            &#10003; <span class="Standard">Phone &amp; Email Support</span>
+          </li>
+        </ul>
+      </div>
+      <div class="pricing-plan" id="pricing-plan-c">
+        <div class="container">
+          <div class="plan-title"><span class="gold">Premium</span></div>
+          <div class="plan-price">$49.99/month</div>
+        </div>
+        <ul class="plan-features plan-c">
+          <li>&#10003; <span class="Premium">100GB Storage</span></li>
+          <li>&#10003; <span class="Premium">10 Users</span></li>
+          <li>&#10003; <span class="Premium">24/7 Support</span></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
